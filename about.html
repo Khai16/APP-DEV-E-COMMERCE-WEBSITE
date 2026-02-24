@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<head>
+  <meta charset="utf-8">
+  <title>AkibaFigures - Anime Figurines E-Commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="Premium anime figurines e-commerce site - 2nd Year College Project by Denmark Osano and Wayne Sulleza">
+  <meta name="author" content="Denmark Osano & Wayne Sulleza">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- # Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- # CSS Plugins -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+
+  <!-- # Main Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* ensure main nav is centered (About, Figures, Contact) */
+    .navbar .navbar-nav.mx-auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    /* optional: make nav links slightly larger for readability (but not required) */
+    .nav-link {
+      font-size: 1.1rem;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    /* keep signup/login/cart small - already using btn-sm */
+    .navbar-actions .btn-sm {
+      font-size: 0.875rem;
+      padding: 0.25rem 0.8rem;
+    }
+    .cart-badge {
+      background: #dc3545;
+      color: white;
+      border-radius: 50%;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.75rem;
+      margin-left: 0.3rem;
+    }
+    /* Student project styles */
+    .student-badge {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .student-credit {
+      background: #f8f9fa;
+      border-left: 4px solid #667eea;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    .team-member {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 5px 15px;
+      background: #e9ecef;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #495057;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light px-0">
+      <a class="navbar-brand order-1 py-0" href="index.html">
+        <!-- logo replaced with figurine theme (still using original structure) -->
+        <img loading="prelaod" decoding="async" class="img-fluid" src="images/logo.png" alt="AkibaFigures" style="max-height: 45px;">
+      </a>
+      <div class="navbar-actions order-3 ml-0 ml-md-4 d-flex align-items-center">
+        <!-- SIGN UP / LOGIN / CART LINKS (small as requested) -->
+        <a href="signup.html" class="btn btn-outline-dark btn-sm mr-2 d-none d-md-inline-block">Sign up</a>
+        <a href="login.html" class="btn btn-outline-dark btn-sm mr-2 d-none d-md-inline-block">Log in</a>
+        <a href="cart.html" class="btn btn-outline-dark btn-sm position-relative d-flex align-items-center">
+          🛒 Cart <span class="cart-badge" id="cartCount">0</span>
+        </a>
+        <button aria-label="navbar toggler" class="navbar-toggler border-0 ml-2" type="button" data-toggle="collapse" data-target="#navigation"> <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <form action="#!" class="search order-lg-3 order-md-2 order-3 ml-auto">
+        <input id="search-query" name="s" type="search" placeholder="Search figures..." autocomplete="off">
+      </form>
+      <div class="collapse navbar-collapse text-center order-lg-2 order-4" id="navigation">
+        <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+          <li class="nav-item"> <a class="nav-link" href="about.html" >About</a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Figures </a>
+            <div class="dropdown-menu"> 
+              <a class="dropdown-item" href="travel.html">Naruto</a> 
+              <a class="dropdown-item" href="travel.html">Demon Slayer</a> 
+              <a class="dropdown-item" href="travel.html">One Piece</a> 
+              <a class="dropdown-item" href="travel.html">Jujutsu Kaisen</a> 
+            </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
+          <!-- mobile signup/login (visible only collapsed) -->
+          <li class="nav-item d-md-none"><a class="nav-link" href="signup.html">Sign up</a></li>
+          <li class="nav-item d-md-none"><a class="nav-link" href="login.html">Log in</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ">
+          <div class="breadcrumbs mb-4"> 
+            <a href="index.html">Home</a>
+            <span class="mx-1">/</span>  
+            <a href="about.html">About Us</a>
+          </div>
+        </div>
+        
+        <!-- Student Project Badge -->
+        <div class="col-12 mb-4">
+          <div class="student-badge">
+            🎓 2nd Year College E-Commerce Project
+          </div>
+        </div>
+        
+        <div class="col-lg-8 mx-auto mb-5 mb-lg-0">
+          <img loading="lazy" decoding="async" src="images/author.jpg" class="img-fluid w-100 mb-4 rounded" alt="Team Photo" style="max-height: 400px; object-fit: cover;">
+          
+          <h1 class="mb-4">Hello, We're Denmark Osano and Wayne Sulleza!</h1>
+          
+          <div class="content">
+            <div class="student-credit">
+              <h3>👥 Meet the Team</h3>
+              <p>
+                <span class="team-member">Denmark Osano</span> 
+                <span class="team-member">Wayne Sulleza</span>
+              </p>
+              <p><strong>2nd Year College Students</strong> | E-Commerce Project</p>
+            </div>
+            
+            <p>Hello! We're Denmark Osano and Wayne Sulleza, 2nd-year college students, and this is our e-commerce website project for anime figurines. We created AkibaFigures as part of our coursework to demonstrate our skills in web development, e-commerce functionality, and user experience design.</p>
+            
+            <p>This website showcases a collection of premium anime figurines from popular series including Naruto, One Piece, Demon Slayer, Jujutsu Kaisen, and more. We've implemented features such as:</p>
+            
+            <ul>
+              <li>Product catalog with categories and filtering</li>
+              <li>Shopping cart functionality with local storage</li>
+              <li>User authentication pages (signup/login)</li>
+              <li>Product detail pages with image galleries</li>
+              <li>Responsive design that works on all devices</li>
+              <li>Search functionality for finding figures</li>
+            </ul>
+            
+            <blockquote>
+              <p>"This project represents our passion for both anime and web development. We hope you enjoy exploring our e-commerce site!" - Denmark & Wayne</p>
+            </blockquote>
+            
+            <h3>📚 About This Project</h3>
+            <p>As 2nd-year college students, we wanted to create a fully functional e-commerce website that demonstrates our understanding of:</p>
+            <ul>
+              <li><strong>Frontend Development:</strong> HTML5, CSS3, JavaScript, Bootstrap framework</li>
+              <li><strong>User Interface Design:</strong> Clean, modern layout with intuitive navigation</li>
+              <li><strong>E-Commerce Functionality:</strong> Product listings, shopping cart, checkout simulation</li>
+              <li><strong>Responsive Design:</strong> Mobile-friendly experience across all devices</li>
+              <li><strong>Local Storage:</strong> Cart persistence using browser's local storage</li>
+            </ul>
+            
+            <h3>🎯 Our Vision</h3>
+            <p>AkibaFigures aims to provide anime fans with a seamless shopping experience for high-quality collectible figurines. While this is a student project, we've designed it with real-world e-commerce best practices in mind, including product categories, detailed descriptions, pricing displays, and a smooth checkout process.</p>
+            
+            <h3>📞 Contact Us</h3>
+            <p>We'd love to hear your feedback on our project! Feel free to reach out through our contact page or connect with us for any questions about this e-commerce website.</p>
+            
+            <p><strong>Email:</strong> denmark.wayne@akibafigures.project<br>
+            <strong>Course:</strong> 2nd Year College - Web Development<br>
+            <strong>Institution:</strong> [Your University/College Name]</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="widget-blocks">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="widget">
+                  <div class="widget-body text-center">
+                    <img loading="lazy" decoding="async" src="images/author.jpg" alt="Team Photo" class="w-100 author-thumb-sm d-block rounded-circle" style="width: 150px; height: 150px; object-fit: cover; margin: 0 auto;">
+                    <h2 class="widget-title my-3">Denmark Osano & Wayne Sulleza</h2>
+                    <p class="mb-3 pb-2">🎓 2nd Year College Students<br>💻 Web Developers<br>📦 E-Commerce Project Creators</p> 
+                    <a href="contact.html" class="btn btn-sm btn-outline-primary">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-12 col-md-6">
+                <div class="widget">
+                  <h2 class="section-title mb-3">Our Project Features</h2>
+                  <div class="widget-body">
+                    <ul class="widget-list">
+                      <li><a href="#!">✅ Anime Figurine Catalog</a></li>
+                      <li><a href="#!">✅ Shopping Cart System</a></li>
+                      <li><a href="#!">✅ User Authentication</a></li>
+                      <li><a href="#!">✅ Product Categories</a></li>
+                      <li><a href="#!">✅ Search Functionality</a></li>
+                      <li><a href="#!">✅ Responsive Design</a></li>
+                      <li><a href="#!">✅ Local Storage Integration</a></li>
+                      <li><a href="#!">✅ Product Detail Pages</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-12 col-md-6">
+                <div class="widget">
+                  <h2 class="section-title mb-3">Technologies Used</h2>
+                  <div class="widget-body">
+                    <ul class="widget-list">
+                      <li><a href="#!">HTML5 <span class="ml-auto">Structure</span></a></li>
+                      <li><a href="#!">CSS3 <span class="ml-auto">Styling</span></a></li>
+                      <li><a href="#!">JavaScript <span class="ml-auto">Functionality</span></a></li>
+                      <li><a href="#!">Bootstrap 4 <span class="ml-auto">Framework</span></a></li>
+                      <li><a href="#!">jQuery <span class="ml-auto">Plugins</span></a></li>
+                      <li><a href="#!">Local Storage <span class="ml-auto">Cart Data</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-12">
+                <div class="widget">
+                  <h2 class="section-title mb-3">Popular Categories</h2>
+                  <div class="widget-body">
+                    <ul class="widget-list">
+                      <li><a href="#!">Naruto <span class="ml-auto">(12)</span></a></li>
+                      <li><a href="#!">One Piece <span class="ml-auto">(9)</span></a></li>
+                      <li><a href="#!">Demon Slayer <span class="ml-auto">(7)</span></a></li>
+                      <li><a href="#!">Jujutsu Kaisen <span class="ml-auto">(5)</span></a></li>
+                      <li><a href="#!">Dragon Ball <span class="ml-auto">(11)</span></a></li>
+                      <li><a href="#!">Attack on Titan <span class="ml-auto">(6)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark mt-5">
+  <div class="container section">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+        <a class="d-inline-block mb-4 pb-2" href="index.html">
+          <img loading="prelaod" decoding="async" class="img-fluid" src="images/logo-white.png" alt="AkibaFigures" style="max-height: 40px;">
+        </a>
+        <ul class="p-0 d-flex navbar-footer mb-0 list-unstyled justify-content-center flex-wrap">
+          <li class="nav-item my-0"> <a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item my-0"> <a class="nav-link" href="article.html">Figures</a></li>
+          <li class="nav-item my-0"> <a class="nav-link" href="privacy-policy.html">Privacy</a></li>
+          <li class="nav-item my-0"> <a class="nav-link" href="terms-conditions.html">Terms</a></li>
+          <li class="nav-item my-0"> <a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <p class="text-light text-center mt-3 mb-0">
+          <small>🎓 2nd Year College Project by <strong>Denmark Osano</strong> & <strong>Wayne Sulleza</strong> · E-Commerce Website Demonstration</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="copyright bg-dark content text-center border-top border-secondary pt-3">
+    Designed by Themefisher · Modified by Denmark Osano & Wayne Sulleza for Educational Purposes
+  </div>
+</footer>
+
+
+<!-- # JS Plugins -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+<script>
+  let cartItems = JSON.parse(localStorage.getItem('akibaCart')) || [];
+  
+  function updateCartCounter() {
+    const countEl = document.getElementById('cartCount');
+    if (countEl) countEl.innerText = cartItems.reduce((acc, i) => acc + (i.qty || 1), 0);
+    localStorage.setItem('akibaCart', JSON.stringify(cartItems));
+  }
+  
+
+  updateCartCounter();
+</script>
+
+</body>
+</html>
